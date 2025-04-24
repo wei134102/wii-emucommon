@@ -52,6 +52,10 @@ make || { fail 'Error building SDL.'; }
 echo "Changing to script directory..."
 cd $SCRIPTPATH || { fail 'Error changing to script directory.'; }
 
+# 创建dist目录
+echo "Creating dist directory..."
+mkdir -p $DIST_DIR || { fail 'Error creating dist directory.'; }
+
 # Build libwiicommon
 echo "Building libemucommon..."
 make || { fail 'Error building libemucommon.'; }

@@ -15,7 +15,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
       with:
-        submodules: ture
+        submodules: true
 
     - name: Update package list
       run: docker run raz0red/devkitppc /opt/devkitpro/pacman/bin/pacman -Q
